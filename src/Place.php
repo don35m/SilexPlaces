@@ -3,11 +3,15 @@ class Place
 {
     private $city_name;
     private $date;
+    private $duration;
+    private $reason;
 
-    function __construct($city_name, $date)
+    function __construct($city_name, $date, $duration, $reason)
     {
         $this->city_name = $city_name;
         $this->date = $date;
+        $this->duration = $duration;
+        $this->reason = $reason;
     }
 
     function setCityName($new_city_name)
@@ -28,6 +32,26 @@ class Place
     function getDate()
     {
         return $this->date;
+    }
+
+    function setDuration($duration)
+    {
+        $this->duration = (string) $duration;
+    }
+
+    function getDuration()
+    {
+        return $this->duration;
+    }
+
+    function setReason($reason)
+    {
+        $this->reason = (string) $reason;
+    }
+
+    function getReason()
+    {
+        return $this->reason;
     }
 
     function save()
