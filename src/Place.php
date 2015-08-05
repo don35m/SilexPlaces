@@ -25,7 +25,7 @@ class Place
         $this->date = (string) $date;
     }
 
-    function getDate($date)
+    function getDate()
     {
         return $this->date;
     }
