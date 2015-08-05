@@ -14,7 +14,10 @@
         'twig.path' => __DIR__.'/../views'
     ));
 
-    
+    $app->get("/", function() use ($app) {
+
+          return $app['twig']->render('places.html.twig', array('places' => Place::getAll()));
+    });
 
     return $app;
 ?>
