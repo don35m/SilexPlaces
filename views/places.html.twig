@@ -14,7 +14,13 @@
               {% for place in places %}
                   <li>{{ place.getCityName }}</li>
                   <ul>
-                    <li><img src= "{{ place.getImage }}"></li>
+                    <li>
+                      {% if place.getImage is empty %}
+                          No image provided.
+                      {% else %}
+                          <img src= "{{ place.getImage }}">
+                      {% endif %}
+                    </li>
                     <li>When: {{ place.getDate }}</li>
                     <li>How long: {{ place.getDuration }}</li>
                     <li>Reason: {{ place.getReason }}</li>

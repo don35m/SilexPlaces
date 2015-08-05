@@ -11,7 +11,13 @@
         <p>When: {{ newplace.getDate }}</p>
         <p>How long: {{ newplace.getDuration }}</p>
         <p>Reason: {{ newplace.getReason }}</p>
-        <img src= "{{ newplace.getImage }}">
+
+        {% if place.getImage is empty %}
+            No image provided.
+        {% else %}
+            <img src= "{{ newplace.getImage }}">
+        {% endif %}
+        
         <p><a href='/'>View the places you've been.</a></p>
     </div>
 </body>
