@@ -1,0 +1,13 @@
+li {
+  list-style-type: none;
+}
+
+body {
+  background-color: grey;
+}
+
+h1 {
+  text-align: center;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
