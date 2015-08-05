@@ -2,10 +2,12 @@
 class Place
 {
     private $city_name;
+    private $date;
 
-    function __construct($city_name)
+    function __construct($city_name, $date)
     {
         $this->city_name = $city_name;
+        $this->date = $date;
     }
 
     function setCityName($new_city_name)
@@ -16,6 +18,16 @@ class Place
     function getCityName()
     {
         return $this->city_name;
+    }
+
+    function setDate($date)
+    {
+        $this->date = (string) $date;
+    }
+
+    function getDate($date)
+    {
+        return $this->date;
     }
 
     function save()
