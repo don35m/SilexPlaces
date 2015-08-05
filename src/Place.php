@@ -5,13 +5,15 @@ class Place
     private $date;
     private $duration;
     private $reason;
+    private $image;
 
-    function __construct($city_name, $date, $duration, $reason)
+    function __construct($city_name, $date, $duration, $reason, $image)
     {
         $this->city_name = $city_name;
         $this->date = $date;
         $this->duration = $duration;
         $this->reason = $reason;
+        $this->image = $image;
     }
 
     function setCityName($new_city_name)
@@ -52,6 +54,16 @@ class Place
     function getReason()
     {
         return $this->reason;
+    }
+
+    function setImage($new_image)
+    {
+        $this->image = $new_image;
+    }
+
+    function getImage()
+    {
+        return $this->image;
     }
 
     function save()

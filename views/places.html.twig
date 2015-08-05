@@ -14,6 +14,7 @@
               {% for place in places %}
                   <li>{{ place.getCityName }}</li>
                   <ul>
+                    <li><img src= "{{ place.getImage }}"></li>
                     <li>When: {{ place.getDate }}</li>
                     <li>How long: {{ place.getDuration }}</li>
                     <li>Reason: {{ place.getReason }}</li>
@@ -41,6 +42,11 @@
           <div class='form-group'>
               <label for='reason'>Why you visited:</label>
               <input id='reason' name='reason' class='form-control' type='text'>
+          </div>
+
+          <div class='form-group'>
+              <label for='image'>Include a URL for picture:</label>
+              <input id='image' name='image' class='form-control' type='text'>
           </div>
 
           <button type='submit' class='btn-info'>Add Place</button>
